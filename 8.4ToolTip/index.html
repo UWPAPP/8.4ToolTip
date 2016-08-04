@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_8.4ToolTip</title>
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="lib/winjs-4.0.1/js/base.js"></script>
+    <script src="lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+</head>
+<body class="win-type-body">
+    <div class="box">
+        <!--Tooltip 1-->
+        <p>Normal Tooltip:</p>
+        <button class="win-button" data-win-control="WinJS.UI.Tooltip" data-win-options="{innerHTML: 'Submit your Order'}">
+            Submit
+        </button>
+
+        <!--Tooltip 2-->
+        <div data-win-control="WinJS.UI.Tooltip"
+             data-win-options="{innerHTML: 'Microsoft Corporation<br><span class=\'win-text-domain\'>www.microsoft.com</span>'}"
+             style="margin-top: 20px;margin-bottom:30px">
+            <span class="win-link">Microsoft</span>
+        </div>
+
+        <!--Infotip-->
+        <p>Infotip (infotip: true)</p>
+        <div class="tooltipAnchor" data-win-control="WinJS.UI.Tooltip"
+             data-win-options="{innerHTML: '<div class=\'strawberryTooltip\'>Strawberry<br /><img src=\'/pages/tooltip/content/strawberry.png\' /></div>', infotip: true}">
+            <span class="win-link">Strawberry</span>
+        </div>
+
+        <!--content ToolTip-->
+        <p>Use element as content (contentElement: myContentElement)</p>
+        <div data-win-control="WinJS.UI.Tooltip" data-win-options="{infotip: true, contentElement: myContentElement}">
+            <span class="win-link">Box Office No. 1</span>
+        </div>
+
+        <!--上面一个toolTip的内容-->
+        <div style="display: none;">
+            <!--Here is the content element. It's put inside a hidden container so that it's invisible to the user until the tooltip takes it out.-->
+            <div id="myContentElement">
+                <div id="myContentElement_picture" style="float:left;">
+                </div>
+                <div style="margin-left:100px;">
+                    <div id="myContentElement_rating">
+                        <div data-win-control="WinJS.UI.Rating" class="win-small movieRating" data-win-options="{userRating: 3}"></div>
+                    </div>
+                    <div id="myContentElement_description">
+                        <p>
+                            You could provide any DOM element as content, even with WinJS controls inside. The
+                            tooltip control will re-parent the element to the tooltip container, and block interaction
+                            events on that element, since that's not the suggested interaction model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

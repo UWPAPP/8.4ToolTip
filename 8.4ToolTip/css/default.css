@@ -1,0 +1,78 @@
+﻿/* detailed description under the name of each sub example */
+#myContentElement 
+{
+    width: 350px;
+    padding: 10px;
+}
+
+#myContentElement_rating 
+{
+    padding: 10px;
+}
+
+#myContentElement_description 
+{
+    font-size: 10pt;
+}
+
+#myContentElement_picture 
+{
+    background-image: url("/pages/tooltip/content/SauceCaramel.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    width:80px;
+    height:80px;
+    float:left;
+}
+
+/* the default for a div is display: block, which takes up the whole line and makes the tooltip appear 
+    at the center of the line, so here set it to inline-block to wrap around the anchor. */
+.tooltipAnchor
+{
+    display: inline-block;
+}
+
+#arrowButton
+{
+    border: 0px;
+    margin: 0px;
+    font-family: "Segoe UI Symbol";
+    font-size: 40px;
+    line-height: 40px;
+    min-width: 0px;
+    background-color: transparent;
+    color:white;
+}
+
+#arrowButton:before
+{
+    content: "\27A1";
+}
+
+.strawberryTooltip
+{
+    text-align: center;
+    font-family: "Segoe UI Semibold";
+    line-height: 34px;
+}
+
+.win-rating.movieRating .win-star.win-average.win-empty
+{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.win-rating.movieRating .win-star.win-average.win-full
+{
+    color: rgb(33, 33, 33);
+}
+
+.win-rating.movieRating .win-star.win-user.win-empty
+{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.win-rating.movieRating .win-star.win-user.win-full
+{
+    color: rgb(53, 174, 67);
+}
+
